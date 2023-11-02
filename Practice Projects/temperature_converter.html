@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Temperature Converter</title>
+	</head>
+	<body>
+		<h1>Temperature Converter</h1>
+		<button type="button" onclick="fToC()">F to C</button>
+		<button type="button" onclick="cToF()">C to F</button>
+
+		<script>
+			function fToC() {
+				let fTemp = prompt("Please enter your temp in Farenheit");
+				let cTemp = (fTemp - 32) / 1.8;
+				let cTempRound = cTemp.toFixed(2);
+
+				alert(`${fTemp} in Celcius is ${cTempRound}.`);
+			}
+
+			function cToF() {
+				let cTemp = prompt("Please enter your temp in Celsius");
+				let fTemp = cTemp * (9 / 5) + 32;
+				let fTempRound = fTemp.toFixed(2);
+
+				alert(`${cTemp} in Farenheit is ${fTempRound}`);
+			}
+		</script>
+	</body>
+</html>

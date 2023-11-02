@@ -1,0 +1,16 @@
+#playerSide,
+#computerSide {
+	width: 500px;
+	height: 500px;
+	position: absolute;
+}
+
+#computerSide {
+	left: 500px;
+	border-left: 1px solid;
+}
+
+#playerBtn {
+	padding-top: 550px;
+	align-content: center;
+}

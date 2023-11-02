@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<button id="button1" onclick="fibonacciUntilLimit()">Until Limit</button>
+		<button id="button2" onclick="fibonacciEvenNumbers()">Even Numbers</button>
+		<button id="button3" onclick="fibonacciSumUp()">Sum Up</button>
+		<button id="button4" onclick="fibonacciIsNumberPartOf()">Is Number Part Of?</button>
+		<script>
+			// function fibonacciSumUp(n) {
+			// 	let a = 0;
+			// 	let b = 1;
+			// 	let sum = 0;
+
+			// 	for (let i = 0; i < n; i++) {
+			// 		sum = sum + a;
+			// 		let next = a + b;
+			// 		a = b;
+			// 		b = next;
+			// 	}
+
+			// 	console.log(sum);
+			// }
+function fibonacciIsNumberPartOf(n) {
+
+    if (isSquare(5 * (n * n) - 4) || isSquare(5 * (n * n) + 4)) {
+       return true;
+    } else {
+        return false; }
+}
+
+
+	</body>
+</html>

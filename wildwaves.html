@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Wild Waves Aquatic Park</title>
+	</head>
+	<body>
+		<h1>Wild Waves Aquatic Park</h1>
+		<button type="button" onclick="buyTicket()">Purchase Attraction</button>
+		<script>
+			// Global Height Constraints
+			const WAVE_POOL_MIN_HEIGHT = 42; // in inches
+			const WATERSLIDE_MIN_HEIGHT = 48; // in inches
+			const LAZY_RIVER_MIN_HEIGHT = 36; // in inches
+
+			function buyTicket() {
+				//Get selected attraction
+				const attractionType = prompt(
+					'Which attraction do you want to visit: type "wave" for wave pool, "water" for waterslide, or "river" for lazy river?'
+				);
+				//Get user's height
+				const userHeight = prompt("What is your height in inches?");
+
+				//Will user be accompanied by adult?
+				const withAdult = prompt("If under 18: will you be accompanied by an adult?");
+
+				//plug in attraction and height to checkHeight Fxn
+				let isAllowed = checkHeight(attractionType, userHeight, withAdult);
+
+				//alert user is tall enough to ride
+				if (isAllowed === true) {
+					alert("You may ride this attraction");
+				} else {
+					alert("You are not tall enough to ride this attraction");
+				}
+
+				console.log("User's selected attraction is " + attractionType);
+				console.log("User's height is " + userHeight);
+			}
+
+			//Verify if user is tall enough for selected attraction
+			function checkHeight(attraction, height, adult) {
+				if (adult === "yes" && height > 42) {
+					return true;
+				}
+
+				if (attraction === "wave" && height >= WAVE_POOL_MIN_HEIGHT) {
+					return true;
+				} else if (attraction === "water" && height >= WATERSLIDE_MIN_HEIGHT) {
+					return true;
+				} else if (attraction === "river" && height >= LAZY_RIVER_MIN_HEIGHT) {
+					return true;
+				}
+
+				return false;
+			}
+		</script>
+	</body>
+</html>

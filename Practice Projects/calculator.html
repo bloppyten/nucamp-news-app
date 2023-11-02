@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculator</title>
+	</head>
+	<body>
+		<h1>BASIC CALCULATOR</h1>
+		<button type="button" onclick="add()">+</button>
+		<button type="button" onclick="subtract()">-</button>
+		<button type="button" onclick="multiply()">*</button>
+		<button type="button" onclick="divide()">/</button>
+		<button type="button" onclick="remainder()">%</button>
+
+		<script>
+			function add() {
+				let addOne = prompt("Enter first number to add");
+				let addTwo = prompt("Enter second number to add");
+				let numAddOne = Number(addOne);
+				let numAddTwo = Number(addTwo);
+
+				let sum = numAddOne + numAddTwo;
+				alert(sum);
+			}
+
+			function subtract() {
+				let subOne = prompt("Enter first number to subtract");
+				let subTwo = prompt("Enter second number to subtract");
+				let numAddOne = Number(addOne);
+				let numAddTwo = Number(addTwo);
+
+				let sum = addOne - addTwo;
+				alert(sum);
+			}
+
+			function multiply() {
+				let mulOne = prompt("Enter first number to multiply");
+				let mulTwo = prompt("Enter second number to multiply");
+				let numAddOne = Number(addOne);
+				let numAddTwo = Number(addTwo);
+
+				let sum = addOne + addTwo;
+				alert(sum);
+			}
+
+			function divide() {
+				let divOne = prompt("Enter first number to divide");
+				let divTwo = prompt("Enter second number to divide");
+				let numAddOne = Number(addOne);
+				let numAddTwo = Number(addTwo);
+
+				let sum = addOne / addTwo;
+				alert(sum);
+			}
+
+			function remainder() {
+				let remOne = prompt("Enter first number to get remainder of");
+				let remTwo = prompt("Enter second number to get remainder of");
+				let numAddOne = Number(addOne);
+				let numAddTwo = Number(addTwo);
+
+				let sum = remOne % remTwo;
+				alert(sum);
+			}
+		</script>
+	</body>
+</html>
